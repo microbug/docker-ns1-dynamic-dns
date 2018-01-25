@@ -1,2 +1,9 @@
-# docker-ns1-dynamic-dns
-Dynamic DNS client for NS1 that runs in Docker
+# Docker NS1 Dynamic DNS
+This updates DNS records in NS1 with the current IP every 5 minutes, running inside a Docker container.
+
+## Usage
+```
+docker run -d \
+    -v /your/config.yml:/config.yml:ro \
+    microbug/ns1-dynamic-dns:latest
+```
