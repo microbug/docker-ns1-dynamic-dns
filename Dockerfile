@@ -7,7 +7,6 @@ RUN apk add --no-cache python3 \
 COPY nsone /nsone
 
 ADD dynamic-dns.py /dynamic-dns.py
-ADD config.yml /config.yml
 
 COPY crontab /etc/crontabs/root
 CMD ["crond", "-f", "-d", "8"]
