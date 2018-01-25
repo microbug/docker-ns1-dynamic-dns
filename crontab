@@ -1,9 +1,1 @@
-# minute (0-59)                         | Dump output: >/dev/null 2>&1
-# | hour (0-23)                         | Multiple values use commas: 1,4,8
-# | |   day of month (1-31)             | Do every x intervals: */x e.g., */10 * * * * is every 15 mins
-# | |   |   month of the year (1-12)    | Aliases: @reboot: run once at startup; @hourly: 0 * * * *;
-# | |   |   |   day of the week (0-6, 0 is Sunday) | @daily: 0 0 * * *; @weekly: 0 0 * * 0; @monthly: 0 0 1 * *
-# | |   |   |   |   command             | @yearly: 0 0 1 1 *
-  * 7   *   *   *   echo foo
-
   */5 * * * * /dynamic-dns.py
