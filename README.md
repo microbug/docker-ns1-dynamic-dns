@@ -23,6 +23,3 @@ services:
 
 ## Config file
 A `config.yml` file **must** be passed or the container won't be able to do anything. The format for the config file can be seen in `example-config.yml`.
-
-## Why are you using an `nsone/` directory instead of `pip3 install nsone`
-There's a bug with `nsone-python` that breaks compatibility with the current latest version of Python 3 (v3.6.4). I've [submitted a pull request to fix it](https://github.com/ns1/nsone-python/pull/38) but until it's accepted I've put the fixed version here so the container will work.
