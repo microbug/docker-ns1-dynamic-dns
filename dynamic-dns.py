@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from nsone import NSONE, Config
+from ns1 import NS1, Config
 import os
 import requests
 import time
@@ -46,7 +46,7 @@ def main():
         nsone_config = Config()
         nsone_config.createFromAPIKey(config_file[domain]['api-key'])
         nsone_config["transport"] = "requests"
-        client = NSONE(config=nsone_config)
+        client = NS1(config=nsone_config)
         zone = client.loadZone(domain)
 
         for record in config_file[domain]['records-to-update']:
