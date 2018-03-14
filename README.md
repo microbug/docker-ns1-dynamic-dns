@@ -24,8 +24,15 @@ services:
     restart: unless-stopped
 ```
 
-### Custom frequency
+### custom frequency
 You can change the value of the `FREQUENCY` environment variable to make the script run every `$FREQUENCY` minutes. The default is every 5 minutes.
+
+### testing
+To test the script, run it through `docker run` and append `/dynamic-dns.py`. This will run the script once, then kill the container. Example:
+
+```
+docker run -v /your/config.yml:/config.yml:ro microbug/dynamic-dns:latest /dynamic-dns.py
+```
 
 ## Config file
 A `config.yml` file **must** be passed or the container won't be able to do anything. The format for the config file can be seen in `example-config.yml`.
